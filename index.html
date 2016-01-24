@@ -91,7 +91,7 @@ d3.csv("data.csv", function(error, data) {
       .attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; });
 
   state.selectAll("rect")
-      .data(function(d) { return d.ages; })
+      .data(function(d) { return d.ages; });
     .enter().append("rect")
       .attr("width", x1.rangeBand())
       .attr("x", function(d) { return x1(d.name); })
